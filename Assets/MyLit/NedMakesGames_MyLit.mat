@@ -12,15 +12,16 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ALPHA_CUTOUT
   - _DOUBLE_SIDED_NORMALS
+  - _NORMALMAP
+  - _SPECULAR_SETUP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 2000
   stringTagMap:
-    RenderType: TransparentCutout
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -34,20 +35,52 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ClearCoatMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ClearCoatSmoothnessMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ColorMap:
         m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: -4.93, y: 3.86}
         m_Offset: {x: 1.74, y: 2.5}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2d0a4c78ea142244cbf9957397b75d7a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _METALLICSPECGLOSSMAP:
+        m_Texture: {fileID: 2800000, guid: 5044213fb3a5e9243ad2a7ffc0209f3b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5044213fb3a5e9243ad2a7ffc0209f3b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5d41fed6b38712241854c1e34c96d3ce, type: 3}
         m_Scale: {x: 5.99, y: 1}
         m_Offset: {x: 2.68, y: 0}
+    - _MetalnessMask:
+        m_Texture: {fileID: 2800000, guid: d72611aa5c8088f4eb634a6f1178acd5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 12dee78e6b4fc644fb75f9d19b8b9ba8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 2800000, guid: c979550daad02764d983ba90e592ad9d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SmoothnessMask:
+        m_Texture: {fileID: 2800000, guid: b4745deb35e7f4a42a3a9da87633930e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecularMap:
+        m_Texture: {fileID: 2800000, guid: d72611aa5c8088f4eb634a6f1178acd5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -68,33 +101,43 @@ Material:
     - _AlphaThreshold: 0.326
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _BlendType: 3
     - _BumpScale: 1
+    - _ClearCoatSetupToggle: 0
+    - _ClearCoatSmoothness: 0.794
+    - _ClearCoatStrength: 0.392
     - _Cull: 0
-    - _Cutoff: 0.308
+    - _Cutoff: 0.293
     - _DestinationBlend: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _FaceRenderingMode: 2
     - _GlossinessSource: 0
+    - _Metalness: 1
+    - _NormalStrength: 0.744
+    - _ParallaxStrength: 0.15
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Shininess: 0
-    - _Smoothness: 0.28
+    - _Smoothness: 0.821
     - _SmoothnessSource: 0
     - _SourceBlend: 1
     - _SpecSource: 0
     - _Specular: 4.62
     - _SpecularHighlights: 1
+    - _SpecularSetupToggle: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _SurfaceType: 2
+    - _SurfaceType: 0
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorTint: {r: 0.7704318, g: 0.7830188, b: 0.7638128, a: 0.8666667}
+    - _ColorTint: {r: 0.8301887, g: 0.62016433, b: 0.41822705, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionTint: {r: 1.8625304, g: 4.2370944, b: 0.9753312, a: 0}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
-    - _Specular: {r: 1, g: 0, b: 0.6480751, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularTint: {r: 1, g: 0.9484351, b: 0.42830187, a: 1}
   m_BuildTextureStacks: []
